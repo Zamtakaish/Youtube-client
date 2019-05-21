@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(97, 141, 180, 0.72);
+}
+
+.header__search-field{
+    max-width: 250px;
+    border: 1px solid #bebebe;
+    border-radius: 10px;
+}

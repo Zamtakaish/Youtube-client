@@ -1,0 +1,7 @@
+.main__video-preview__video{
+    height: 400px;
+    width: 280px;
+    border: 1px solid #b4c9d8;
+    border-radius: 5px;
+    background-color: #fffeee;
+}

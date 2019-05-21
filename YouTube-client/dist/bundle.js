@@ -86,14 +86,47 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/css/style.css":
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/css/header.css":
+/*!******************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/css/header.css ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".header{\\n    display: flex;\\n    justify-content: center;\\n    background-color: rgba(97, 141, 180, 0.72);\\n}\\n\\n.header__search-field{\\n    max-width: 250px;\\n    border: 1px solid #bebebe;\\n    border-radius: 10px;\\n}\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/css/header.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/css/main.css":
+/*!****************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/css/main.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Imports\nexports.i(__webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./scroll.css */ \"./node_modules/css-loader/dist/cjs.js!./src/css/scroll.css\"), \"\");\n\n// Module\nexports.push([module.i, \"*{\\n    margin: 0;\\n    padding: 0;\\n}\\n\\nbody{\\n    background-color: rgb(121, 188, 199);\\n}\\n\\n.main{\\n    display: flex;\\n    flex-direction: column;\\n    height: 100%;\\n}\\n\\n.main section{\\n    display: block;\\n}\\n.main__video-preview{\\n    list-style-type: none;\\n    display: flex;\\n    justify-content: center;\\n}\\n\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/css/main.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/css/scroll.css":
+/*!******************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/css/scroll.css ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"\\n.main__scroll{\\n    list-style-type: none;\\n    display: flex;\\n    justify-content: center;\\n}\\n.main__scroll__item{\\n    display: block;\\n    width: 1.5vw;\\n    height: 1.5vw;\\n    border: 1px solid #b4c9d8;\\n    border-radius: 50%;\\n    background-color: white;\\n}\\n.main__scroll__item_counter{\\n    width: 100%;\\n    height: 100%;\\n    text-align: center;\\n}\\n\\n#scroll-back{\\n    opacity: 0;\\n}\\n.main__scroll__item_button{\\n    margin: 0 auto;\\n    padding: 0;\\n    width: 65%;\\n    height: 100%;\\n    display: block;\\n    border: none;\\n    border-radius: 50%;\\n}\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/css/scroll.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/css/video.css":
 /*!*****************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/css/style.css ***!
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/css/video.css ***!
   \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"header{\\n    display: flex;\\n    justify-content: center;\\n    background-color: rgba(97, 141, 180, 0.72);\\n}\\n\\nmain{\\n    display: flex;\\n    flex-direction: column;\\n    background-color: rgba(121, 188, 199, 0.72);\\n}\\nheader section{\\n    width: 250px;\\n    border: 1px solid #bebebe;\\n    border-radius: 10px;\\n    height: 50px;\\n}\\nsection{\\n    display: block;\\n    height: 100px;\\n}\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/css/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".main__video-preview__video{\\n    height: 400px;\\n    width: 280px;\\n    border: 1px solid #b4c9d8;\\n    border-radius: 5px;\\n    background-color: #fffeee;\\n}\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/css/video.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -131,14 +164,48 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 
 /***/ }),
 
-/***/ "./src/css/style.css":
+/***/ "./src/css/header.css":
+/*!****************************!*\
+  !*** ./src/css/header.css ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./header.css */ \"./node_modules/css-loader/dist/cjs.js!./src/css/header.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/css/header.css?");
+
+/***/ }),
+
+/***/ "./src/css/main.css":
+/*!**************************!*\
+  !*** ./src/css/main.css ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./main.css */ \"./node_modules/css-loader/dist/cjs.js!./src/css/main.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/css/main.css?");
+
+/***/ }),
+
+/***/ "./src/css/video.css":
 /*!***************************!*\
-  !*** ./src/css/style.css ***!
+  !*** ./src/css/video.css ***!
   \***************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./style.css */ \"./node_modules/css-loader/dist/cjs.js!./src/css/style.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/css/style.css?");
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./video.css */ \"./node_modules/css-loader/dist/cjs.js!./src/css/video.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/css/video.css?");
+
+/***/ }),
+
+/***/ "./src/js/addHtmlElement.js":
+/*!**********************************!*\
+  !*** ./src/js/addHtmlElement.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return addNewElement; });\nfunction addNewElement(tagName, className, parentTag, id) {\n  var newElement = document.createElement(tagName);\n  newElement.className += className;\n\n  if (arguments.length > 3) {\n    newElement.id = id;\n  }\n\n  parentTag.appendChild(newElement);\n  return newElement;\n}\n\n//# sourceURL=webpack:///./src/js/addHtmlElement.js?");
 
 /***/ }),
 
@@ -150,7 +217,7 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dis
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./src/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/header.css */ \"./src/css/header.css\");\n/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_header_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/main.css */ \"./src/css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _css_video_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/video.css */ \"./src/css/video.css\");\n/* harmony import */ var _css_video_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_video_css__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _addHtmlElement__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./addHtmlElement */ \"./src/js/addHtmlElement.js\");\n\n\n\n // Header\n\nvar parent = document.body;\nparent = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('header', 'header', parent); // Search field\n\nparent = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('section', 'header__search-field_wrapper', parent);\nparent = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('form', 'header__search-field', parent); // Submit button\n\nvar newElement = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('input', 'header__search-field__button_submit', parent);\nnewElement.setAttribute('type', 'submit');\nnewElement.setAttribute('value', 'Search'); // Search text field\n\nnewElement = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('input', 'header__search-field__input_search', parent);\nnewElement.className += 'header__search-field__input_search';\nnewElement.setAttribute('type', 'text');\nnewElement.setAttribute('name', 'search'); // Main\n\nparent = document.body;\nparent = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('main', 'main', parent); // Video preview section\n\nparent = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('section', 'main__video-preview_wrapper', parent);\nparent = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('ul', 'main__video-preview', parent);\n\nfor (var i = 0; i < 4; i += 1) {\n  Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('li', 'main__video-preview__video', parent);\n} // Scroll section\n\n\nparent = document.body.lastElementChild;\nparent = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('section', 'main__scroll_wrapper', parent);\nparent = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('ul', 'main__scroll', parent);\nnewElement = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('img', 'main__scroll__item_button', Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('li', 'main__scroll__item', parent, 'scroll-back'));\nnewElement.setAttribute('src', './src/assets/images/arrow-left-solid.svg');\nnewElement = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('div', 'main__scroll__item_counter', Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('li', 'main__scroll__item', parent), 'counter');\nnewElement.innerHTML = '1';\nnewElement = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('img', 'main__scroll__item_button', Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('li', 'main__scroll__item', parent, 'scroll-forward'));\nnewElement.setAttribute('src', './src/assets/images/arrow-right-solid.svg');\n\n//# sourceURL=webpack:///./src/js/script.js?");
 
 /***/ })
 
