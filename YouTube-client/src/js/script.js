@@ -1,1 +1,1 @@
-console.log('smth');
+import '../css/style.css';
