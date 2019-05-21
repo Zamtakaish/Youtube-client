@@ -2,6 +2,7 @@ import '../css/header.css';
 import '../css/main.css';
 import '../css/video.css';
 import addNewElement from './addHtmlElement';
+import runEvents from './scrollController';
 
 // Header
 let parent = document.body;
@@ -40,3 +41,4 @@ newElement.innerHTML = '1';
 newElement = addNewElement('img', 'main__scroll__item_button', addNewElement('li', 'main__scroll__item', parent, 'scroll-forward'));
 newElement.setAttribute('src', './src/assets/images/arrow-right-solid.svg');
 
+runEvents();
