@@ -21,7 +21,7 @@ body{
     justify-content: center;
 }
 .main__video-preview{
-    width: 97%;
+    width: 100%;
     list-style-type: none;
     display: flex;
     overflow: scroll;

@@ -44,7 +44,7 @@ export default function runSliderController() {
         scrollBack.style.opacity = 1;
       }
     } else if (scrollStartPosition || (moveDistance < 0)) {
-      previewSection.scrollTo({ left: moveDistance, behavior: 'smooth' });
+      previewSection.scrollTo({ left: scrollStartPosition, behavior: 'smooth' });
     }
     previewSection.classList.remove('active');
   });
