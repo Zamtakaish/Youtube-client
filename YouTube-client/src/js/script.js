@@ -1,6 +1,7 @@
 import '../css/header.css';
 import '../css/main.css';
 import '../css/video.css';
+import '../css/media.css';
 import addNewElement from './addHtmlElement';
 import runEvents from './scrollController';
 import runSliderController from './sliderController';
