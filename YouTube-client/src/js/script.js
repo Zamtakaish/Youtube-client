@@ -3,6 +3,7 @@ import '../css/main.css';
 import '../css/video.css';
 import addNewElement from './addHtmlElement';
 import runEvents from './scrollController';
+import runSliderController from './sliderController';
 
 // Header
 let parent = document.body;
@@ -27,7 +28,7 @@ parent = addNewElement('main', 'main', parent);
 // Video preview section
 parent = addNewElement('section', 'main__video-preview_wrapper', parent);
 parent = addNewElement('ul', 'main__video-preview', parent);
-for (let i = 0; i < 4; i += 1) {
+for (let i = 0; i < 15; i += 1) {
   addNewElement('li', 'main__video-preview__video', parent);
 }
 // Scroll section
@@ -42,3 +43,4 @@ newElement = addNewElement('img', 'main__scroll__item_button', addNewElement('li
 newElement.setAttribute('src', './src/assets/images/arrow-right-solid.svg');
 
 runEvents();
+runSliderController();

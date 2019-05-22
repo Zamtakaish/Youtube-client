@@ -1,7 +1,10 @@
 .main__video-preview__video{
+    flex-shrink: 0;
+    margin: 5% 2%;
     height: 400px;
-    width: 280px;
+    width: 21%;
     border: 1px solid #b4c9d8;
     border-radius: 5px;
     background-color: #fffeee;
 }
+

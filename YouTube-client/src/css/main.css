@@ -15,12 +15,18 @@ body{
     height: 100%;
 }
 
-.main section{
-    display: block;
-}
-.main__video-preview{
-    list-style-type: none;
+.main__video-preview_wrapper{
+    width: 100%;
     display: flex;
     justify-content: center;
 }
+.main__video-preview{
+    width: 97%;
+    list-style-type: none;
+    display: flex;
+    overflow: scroll;
 
+}
+.main__video-preview::-webkit-scrollbar{
+    width: 0;
+}
