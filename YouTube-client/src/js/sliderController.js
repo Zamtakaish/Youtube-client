@@ -21,18 +21,21 @@ export default function runSliderController() {
   previewSection.addEventListener('mouseleave', () => {
     if (previewSection.classList.contains('active')) {
       previewSection.classList.remove('active');
-      previewSection.scrollLeft = scrollStartPosition;
+      previewSection.scrollTo({ left: scrollStartPosition, behavior: 'smooth' });
     }
   });
   previewSection.addEventListener('mouseup', () => {
     const moveDistance = mouseCurrentPosition - mouseDownPosition;
     const previewSectionWidth = +(getComputedStyle(previewSection).width.slice(0, -2));
+
     if (Math.abs(moveDistance) >= (previewSectionWidth * 0.1)) {
       if (moveDistance < 0) {
-        previewSection.scrollLeft = scrollStartPosition + previewSectionWidth;
+        previewSection.scrollTo({ left: scrollStartPosition + previewSectionWidth, behavior: 'smooth' });
+
         counter.innerHTML = (+counter.innerHTML + 1).toString();
-      } else {
-        previewSection.scrollLeft = scrollStartPosition - previewSectionWidth;
+      } else if (+counter.innerHTML > 1) {
+        previewSection.scrollTo({ left: scrollStartPosition - previewSectionWidth, behavior: 'smooth' });
+
         counter.innerHTML = (+counter.innerHTML - 1).toString();
       }
       if (+counter.innerHTML === 1) {
@@ -40,8 +43,8 @@ export default function runSliderController() {
       } else {
         scrollBack.style.opacity = 1;
       }
-    } else {
-      previewSection.scrollLeft = scrollStartPosition;
+    } else if (scrollStartPosition || (moveDistance < 0)) {
+      previewSection.scrollTo({ left: moveDistance, behavior: 'smooth' });
     }
     previewSection.classList.remove('active');
   });
