@@ -1,4 +1,4 @@
-import SearchRequest from './SearchRequest';
+import SearchRequest from '../requests/SearchRequest';
 
 export default function runRequestController() {
   const input = document.getElementsByClassName('header__search-field__input_search')[0];

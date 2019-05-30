@@ -1,5 +1,5 @@
 import addNewElement from './addHtmlElement';
-import getStatistics from './getStatistics';
+import getStatistics from '../requests/getStatistics';
 
 export default function renderVideos(videoArray) {
   const parent = document.getElementsByClassName('main__video-preview')[0];

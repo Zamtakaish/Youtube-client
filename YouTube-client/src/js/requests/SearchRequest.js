@@ -1,4 +1,4 @@
-import renderVideos from './renderVideos';
+import renderVideos from '../rendering/renderVideos';
 
 export default class SearchRequest {
   constructor(request) {
