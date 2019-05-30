@@ -3710,6 +3710,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./src/js/getStatistics.js":
+/*!*********************************!*\
+  !*** ./src/js/getStatistics.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return getStatistics; });\nfunction getStatistics(idStr) {\n  return fetch(\"https://www.googleapis.com/youtube/v3/videos?key=AIzaSyDo42jwo0yTyBe0eTmi832z58fG4dcrn9k&id=\".concat(idStr, \"&part=snippet,statistics\")).then(function (response) {\n    return response.json();\n  })[\"catch\"](alert);\n}\n\n//# sourceURL=webpack:///./src/js/getStatistics.js?");
+
+/***/ }),
+
 /***/ "./src/js/renderVideos.js":
 /*!********************************!*\
   !*** ./src/js/renderVideos.js ***!
@@ -3718,7 +3730,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return renderVideos; });\n/* harmony import */ var _addHtmlElement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addHtmlElement */ \"./src/js/addHtmlElement.js\");\n\nfunction renderVideos(videoArray) {\n  var parent = document.getElementsByClassName('main__video-preview')[0];\n\n  for (var i = 0; i < videoArray.length; i += 1) {\n    var video = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('li', 'main__video-preview__video', parent);\n    var image = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('img', 'main__video-preview__video__image', video);\n    image.setAttribute('src', videoArray[i].snippet.thumbnails[\"default\"].url);\n    var title = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('p', 'main__video-preview__video__title', video);\n    title.innerHTML = videoArray[i].snippet.title;\n    var author = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('p', 'main__video-preview__video__author', video);\n    author.innerHTML = videoArray[i].snippet.channelTitle;\n    var description = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('p', 'main__video-preview__video__author', video);\n    description.innerHTML = videoArray[i].snippet.description;\n    var date = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('p', 'main__video-preview__video__publish-date', video);\n    date.innerHTML = Date.parse(videoArray[i].snippet.publishedAt);\n  }\n}\n\n//# sourceURL=webpack:///./src/js/renderVideos.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return renderVideos; });\n/* harmony import */ var _addHtmlElement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addHtmlElement */ \"./src/js/addHtmlElement.js\");\n/* harmony import */ var _getStatistics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getStatistics */ \"./src/js/getStatistics.js\");\n\n\nfunction renderVideos(videoArray) {\n  var parent = document.getElementsByClassName('main__video-preview')[0];\n  var videoId = [];\n\n  for (var i = 0; i < videoArray.length; i += 1) {\n    videoId.push(videoArray[i].id.videoId);\n  }\n\n  var idRequest = videoId.join();\n  var statisticsResponse = Object(_getStatistics__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(idRequest);\n  statisticsResponse.then(function (response) {\n    for (var _i = 0; _i < videoArray.length; _i += 1) {\n      var video = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('li', 'main__video-preview__video', parent);\n      var image = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('img', 'main__video-preview__video__image', video);\n      image.setAttribute('src', videoArray[_i].snippet.thumbnails.high.url);\n      var title = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('p', 'main__video-preview__video__title', video);\n      title.innerHTML = videoArray[_i].snippet.title;\n      var author = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('p', 'main__video-preview__video__author', video);\n      author.innerHTML = videoArray[_i].snippet.channelTitle;\n      var description = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('p', 'main__video-preview__video__author', video);\n      description.innerHTML = videoArray[_i].snippet.description;\n      var date = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('p', 'main__video-preview__video__publish-date', video);\n      date.innerHTML = Date.parse(videoArray[_i].snippet.publishedAt);\n      var views = Object(_addHtmlElement__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('p', 'main__video-preview__video__views', video);\n      views.innerHTML = response.items[_i].statistics.viewCount;\n    }\n  });\n}\n\n//# sourceURL=webpack:///./src/js/renderVideos.js?");
 
 /***/ }),
 
