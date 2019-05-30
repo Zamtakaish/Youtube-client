@@ -3,7 +3,7 @@ import renderVideos from '../rendering/renderVideos';
 export default class SearchRequest {
   constructor(request) {
     this.nextPage = '';
-    this.url = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyDo42jwo0yTyBe0eTmi832z58fG4dcrn9k&type=video&part=snippet&maxResults=15&q=${request}`;
+    this.url = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyA-_1EB1wVg_qlOdaekViFEMTn7HxKHAPo&type=video&part=snippet&maxResults=15&q=${request}`;
   }
 
   doFetch() {

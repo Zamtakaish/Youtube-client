@@ -48,4 +48,8 @@ export default function runSliderController() {
     }
     previewSection.classList.remove('active');
   });
+  document.body.onresize = () => {
+    const previewSectionWidth = +(getComputedStyle(previewSection).width.slice(0, -2));
+    previewSection.scrollLeft = previewSectionWidth * (+counter.innerHTML - 1);
+  };
 }

@@ -1,5 +1,5 @@
 export default function getStatistics(idStr) {
-  return fetch(`https://www.googleapis.com/youtube/v3/videos?key=AIzaSyDo42jwo0yTyBe0eTmi832z58fG4dcrn9k&id=${idStr}&part=snippet,statistics`)
+  return fetch(`https://www.googleapis.com/youtube/v3/videos?key=AIzaSyA-_1EB1wVg_qlOdaekViFEMTn7HxKHAPo&id=${idStr}&part=statistics`)
     .then(response => response.json())
     .catch(alert);
 }
