@@ -14,8 +14,9 @@ export default function renderVideos(videoArray) {
       const video = addNewElement('li', 'main__video-preview__video', parent);
       const image = addNewElement('img', 'main__video-preview__video__image', video);
       image.setAttribute('src', videoArray[i].snippet.thumbnails.high.url);
-      const title = addNewElement('p', 'main__video-preview__video__title', video);
+      const title = addNewElement('a', 'main__video-preview__video__title', video);
       title.innerHTML = videoArray[i].snippet.title;
+      title.setAttribute('href', `https://www.youtube.com/watch?v=${videoArray[i].id.videoId}`);
       const author = addNewElement('p', 'main__video-preview__video__author', video);
       author.innerHTML = videoArray[i].snippet.channelTitle;
       const description = addNewElement('p', 'main__video-preview__video__author', video);
