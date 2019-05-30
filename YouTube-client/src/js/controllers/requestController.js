@@ -13,6 +13,7 @@ export default function runRequestController() {
     counter.innerHTML = '1';
     const request = new SearchRequest(input.value);
     request.render();
+    document.getElementsByClassName('main__scroll_wrapper')[0].removeAttribute('hidden');
     const observer = new MutationObserver(() => {
       switch (true) {
         case (pageWidth <= 425): {

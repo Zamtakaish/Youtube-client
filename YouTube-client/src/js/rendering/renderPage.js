@@ -1,4 +1,5 @@
 import addNewElement from './addHtmlElement';
+import renderScroll from './renderScroll';
 
 export default function renderPage() {
   // Header
@@ -7,13 +8,13 @@ export default function renderPage() {
   // Search field
   parent = addNewElement('section', 'header__search-field', parent);
   // Submit button
-    let newElement = addNewElement('img', 'header__search-field__button_submit', addNewElement('button', 'header__search-field__button_submit_wrapper', parent));
-    newElement.setAttribute('src', './src/assets/images/search.svg');
+  let newElement = addNewElement('img', 'header__search-field__button_submit', addNewElement('button', 'header__search-field__button_submit_wrapper', parent));
+  newElement.setAttribute('src', './src/assets/images/search.svg');
   // Search text field
   newElement = addNewElement('input', 'header__search-field__input_search', parent);
   newElement.setAttribute('type', 'text');
   newElement.setAttribute('name', 'search');
-    newElement.setAttribute('placeholder', 'What are you looking for?');
+  newElement.setAttribute('placeholder', 'What are you looking for?');
 
   // Main
   parent = document.body;
@@ -24,13 +25,5 @@ export default function renderPage() {
   parent = addNewElement('ul', 'main__video-preview', parent);
 
   // Scroll section
-  parent = document.body.lastElementChild;
-  parent = addNewElement('section', 'main__scroll_wrapper', parent);
-  parent = addNewElement('ul', 'main__scroll', parent);
-  newElement = addNewElement('img', 'main__scroll__item_button', addNewElement('li', 'main__scroll__item', parent, 'scroll-back'));
-  newElement.setAttribute('src', './src/assets/images/arrow-left-solid.svg');
-  newElement = addNewElement('div', 'main__scroll__item_counter', addNewElement('li', 'main__scroll__item', parent), 'counter');
-  newElement.innerHTML = '1';
-  newElement = addNewElement('img', 'main__scroll__item_button', addNewElement('li', 'main__scroll__item', parent, 'scroll-forward'));
-  newElement.setAttribute('src', './src/assets/images/arrow-right-solid.svg');
+  renderScroll();
 }
