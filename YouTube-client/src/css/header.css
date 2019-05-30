@@ -5,7 +5,13 @@
 }
 
 .header__search-field{
+    display: flex;
+
     max-width: 250px;
     border: 1px solid #bebebe;
     border-radius: 10px;
+}
+.header__search-field__button_submit{
+    width: 20px;
+    background-color: red;
 }

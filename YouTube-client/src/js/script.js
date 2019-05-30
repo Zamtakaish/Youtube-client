@@ -5,6 +5,9 @@ import '../css/media.css';
 import addNewElement from './addHtmlElement';
 import runEvents from './scrollController';
 import runSliderController from './sliderController';
+import runRequestController from './requestController';
+
+require('@babel/polyfill');
 
 // Header
 let parent = document.body;
@@ -13,12 +16,11 @@ parent = addNewElement('header', 'header', parent);
 parent = addNewElement('section', 'header__search-field_wrapper', parent);
 parent = addNewElement('form', 'header__search-field', parent);
 // Submit button
-let newElement = addNewElement('input', 'header__search-field__button_submit', parent);
-newElement.setAttribute('type', 'submit');
-newElement.setAttribute('value', 'Search');
+let newElement = addNewElement('div', 'header__search-field__button_submit', parent);
+// newElement.setAttribute('type', 'submit');
+// newElement.setAttribute('value', 'Search');
 // Search text field
 newElement = addNewElement('input', 'header__search-field__input_search', parent);
-newElement.className += 'header__search-field__input_search';
 newElement.setAttribute('type', 'text');
 newElement.setAttribute('name', 'search');
 
@@ -29,9 +31,9 @@ parent = addNewElement('main', 'main', parent);
 // Video preview section
 parent = addNewElement('section', 'main__video-preview_wrapper', parent);
 parent = addNewElement('ul', 'main__video-preview', parent);
-for (let i = 0; i < 15; i += 1) {
+/*for (let i = 0; i < 15; i += 1) {
   addNewElement('li', 'main__video-preview__video', parent);
-}
+}*/
 // Scroll section
 parent = document.body.lastElementChild;
 parent = addNewElement('section', 'main__scroll_wrapper', parent);
@@ -45,3 +47,4 @@ newElement.setAttribute('src', './src/assets/images/arrow-right-solid.svg');
 
 runEvents();
 runSliderController();
+runRequestController();
