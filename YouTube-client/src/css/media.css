@@ -1,18 +1,35 @@
 @media (max-width: 1024px){
-    .main__video-preview__video{
+    .header {
+        height: 4vw;
+    }
+    .main__video-preview__video_wrapper{
         width: 27%;
         margin: 5% 3.16%;
+        padding-top: 50%;
+        font-size: 0.9em;
     }
 }
 @media (max-width: 768px){
-    .main__video-preview__video{
+    .header {
+        height: 6.5vw;
+    }
+
+    .main__video-preview__video_wrapper{
         width: 40%;
         margin: 5% 5%;
+        padding-top: 73%;
+        font-size: 0.95em;
     }
 }
 @media (max-width: 425px){
-    .main__video-preview__video{
+    .header {
+        height: 10.5vw;
+    }
+
+    .main__video-preview__video_wrapper{
         width: 80%;
         margin: 5% 10%;
+        padding-top: 145%;
+        font-size: 0.9em;
     }
 }

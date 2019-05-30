@@ -5,14 +5,15 @@ export default function renderPage() {
   let parent = document.body;
   parent = addNewElement('header', 'header', parent);
   // Search field
-  parent = addNewElement('section', 'header__search-field_wrapper', parent);
-  parent = addNewElement('form', 'header__search-field', parent);
+  parent = addNewElement('section', 'header__search-field', parent);
   // Submit button
-  let newElement = addNewElement('div', 'header__search-field__button_submit', parent);
+    let newElement = addNewElement('img', 'header__search-field__button_submit', addNewElement('button', 'header__search-field__button_submit_wrapper', parent));
+    newElement.setAttribute('src', './src/assets/images/search.svg');
   // Search text field
   newElement = addNewElement('input', 'header__search-field__input_search', parent);
   newElement.setAttribute('type', 'text');
   newElement.setAttribute('name', 'search');
+    newElement.setAttribute('placeholder', 'What are you looking for?');
 
   // Main
   parent = document.body;

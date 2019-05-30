@@ -2,7 +2,7 @@ import SearchRequest from '../requests/SearchRequest';
 
 export default function runRequestController() {
   const input = document.getElementsByClassName('header__search-field__input_search')[0];
-  const search = document.getElementsByClassName('header__search-field__button_submit')[0];
+  const search = document.getElementsByClassName('header__search-field__button_submit_wrapper')[0];
   const counter = document.getElementById('counter');
   const pageWidth = +getComputedStyle(document.body).width.slice(0, -2);
   search.addEventListener('click', () => {
