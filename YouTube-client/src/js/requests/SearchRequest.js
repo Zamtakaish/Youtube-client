@@ -14,6 +14,7 @@ export default class SearchRequest {
 
   render() {
     const data = this.doFetch();
+    console.log(data);
     data.then((response) => {
       this.nextPage = `&pageToken=${response.nextPageToken}`;
       console.log(response.items);

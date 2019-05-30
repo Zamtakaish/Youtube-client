@@ -26,7 +26,6 @@ export default function runRequestController() {
           }
           break;
         }
-
         case ((pageWidth > 768) && (pageWidth <= 1024)): {
           if ((+counter.innerHTML % 4) === 0) {
             request.render();
@@ -34,6 +33,7 @@ export default function runRequestController() {
           break;
         }
         default: {
+          request.render();
           break;
         }
       }
