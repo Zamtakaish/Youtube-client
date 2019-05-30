@@ -5,6 +5,7 @@ export default function runRequestController() {
   const search = document.getElementsByClassName('header__search-field__button_submit_wrapper')[0];
   const counter = document.getElementById('counter');
   const pageWidth = +getComputedStyle(document.body).width.slice(0, -2);
+  let prevPage = 0;
   search.addEventListener('click', () => {
     const previewSection = document.getElementsByClassName('main__video-preview')[0];
     previewSection.innerHTML = '';
@@ -15,25 +16,34 @@ export default function runRequestController() {
     const observer = new MutationObserver(() => {
       switch (true) {
         case (pageWidth <= 425): {
-          if ((+counter.innerHTML % 14) === 0) {
+          if (((+counter.innerHTML % 14) === 0) && (+counter.innerHTML > prevPage)) {
             request.render();
+            prevPage = +counter.innerHTML;
           }
           break;
         }
         case ((pageWidth > 425) && (pageWidth <= 768)): {
-          if ((+counter.innerHTML % 7) === 0) {
+          if (((+counter.innerHTML % 7) === 0) && (+counter.innerHTML > prevPage)) {
             request.render();
+            prevPage = +counter.innerHTML;
           }
           break;
         }
         case ((pageWidth > 768) && (pageWidth <= 1024)): {
-          if ((+counter.innerHTML % 4) === 0) {
+          if (((+counter.innerHTML % 4) === 0) && (+counter.innerHTML > prevPage)) {
             request.render();
+            prevPage = +counter.innerHTML;
+          }
+          break;
+        }
+        case (pageWidth > 1024): {
+          if (((+counter.innerHTML % 3) === 0) && (+counter.innerHTML > prevPage)) {
+            request.render();
+            prevPage = +counter.innerHTML;
           }
           break;
         }
         default: {
-          request.render();
           break;
         }
       }
