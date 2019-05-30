@@ -3,7 +3,7 @@ import renderVideos from '../rendering/renderVideos';
 export default class SearchRequest {
   constructor(request) {
     this.nextPage = '';
-    this.url = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyA-_1EB1wVg_qlOdaekViFEMTn7HxKHAPo&type=video&part=snippet&maxResults=15&q=${request}`;
+    this.url = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyAF4r5PXBJWT0es6h4skG9NkkSKDguBXKQ&type=video&part=snippet&maxResults=15&q=${request}`;
   }
 
   doFetch() {
@@ -14,10 +14,8 @@ export default class SearchRequest {
 
   render() {
     const data = this.doFetch();
-    console.log(data);
     data.then((response) => {
       this.nextPage = `&pageToken=${response.nextPageToken}`;
-      console.log(response.items);
       renderVideos(response.items);
     });
   }

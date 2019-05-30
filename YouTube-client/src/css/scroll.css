@@ -5,6 +5,7 @@
     justify-content: center;
 }
 .main__scroll__item{
+    position: relative;
     display: block;
     width: 1.5vw;
     height: 1.5vw;
@@ -33,4 +34,24 @@
     display: block;
     border: none;
     border-radius: 50%;
+}
+.main__scroll__item_button_tooltip{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 110%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border-radius: 20%;
+    visibility: hidden;
+    background-color: #6094d4;
+    opacity: 0;
+}
+
+#scroll-back:hover, #scroll-forward:hover{
+    background-color: #658082;
+}
+#scroll-back:active, #scroll-forward:active{
+    background-color: #117788;
 }
