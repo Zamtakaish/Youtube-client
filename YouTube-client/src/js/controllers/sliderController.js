@@ -6,6 +6,9 @@ export default function runSliderController() {
   const counter = document.getElementById('counter');
   const scrollBack = document.getElementById('scroll-back');
   previewSection.addEventListener('mousedown', (event) => {
+    if (event.target.classList.contains('main__video-preview__video__title')) {
+      return;
+    }
     mouseDownPosition = event.pageX;
     mouseCurrentPosition = mouseDownPosition;
     previewSection.classList.add('active');
@@ -13,6 +16,9 @@ export default function runSliderController() {
   });
   previewSection.addEventListener('mousemove', (event) => {
     event.preventDefault();
+    if (event.target.classList.contains('main__video-preview__video__title')) {
+      return;
+    }
     if (previewSection.classList.contains('active')) {
       mouseCurrentPosition = event.pageX;
       previewSection.scrollLeft = scrollStartPosition - (mouseCurrentPosition - mouseDownPosition);
