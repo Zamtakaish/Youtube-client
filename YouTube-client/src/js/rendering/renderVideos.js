@@ -22,7 +22,8 @@ export default function renderVideos(videoArray) {
       const author = addNewElement('li', 'main__video-preview__video__meta-info_author', metaInfo);
       author.innerHTML = `Channel: ${videoArray[i].snippet.channelTitle}`;
       const date = addNewElement('li', 'main__video-preview__video__meta-info_publish-date', metaInfo);
-      date.innerHTML = `Published: ${Date.parse(videoArray[i].snippet.publishedAt)}`;
+      const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      date.innerHTML = `Published: ${new Date(videoArray[i].snippet.publishedAt).toLocaleDateString('en-US', dateOptions)}`;
       const views = addNewElement('li', 'main__video-preview__video__meta-info_views', metaInfo);
       views.innerHTML = `Views: ${response.items[i].statistics.viewCount}`;
       const description = addNewElement('p', 'main__video-preview__video__description', video);
