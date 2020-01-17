@@ -45,8 +45,9 @@
     text-decoration: none;
     color: #292071;
     overflow: hidden;
-    font-family: Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 800;
+    font-size: 1.1vw;
+    line-height: 1.2;
     text-align: center;
     background: rgb(148, 176, 202);
 }
@@ -62,6 +63,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none;
+    font-size: 1vw;
+    color: #231e4a;
     background: #abc6da;
 }
 .main__video-preview__video__author{
@@ -86,6 +89,7 @@
     overflow: hidden;
     padding: 5%;
     font-size: 1vw;
+    font-weight: 100;
     word-wrap: break-word;
 }
 
