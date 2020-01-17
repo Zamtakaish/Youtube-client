@@ -64,8 +64,11 @@
     flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none;
-    color: #231e4a;
+    color: #1e90a2;
     background: #abc6da;
+}
+.meta-info_fetched-data{
+    color: #231e4a;
 }
 .main__video-preview__video__author{
     height: 5%;
