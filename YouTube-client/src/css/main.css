@@ -1,5 +1,10 @@
 @import "scroll.css";
 
+@font-face {
+    font-family: "Rubik Regular";
+    src: url(../assets/fonts/Rubik-Regular.ttf) format("truetype");
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +12,8 @@
 
 body{
     background-color: rgb(121, 188, 199);
+    font-family: "Rubik Regular", sans-serif;
+    font-weight: 600;
 }
 
 .main{
