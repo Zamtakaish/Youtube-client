@@ -18,11 +18,12 @@ export default function renderVideos(videoArray) {
       const title = addNewElement('a', 'main__video-preview__video__title', video);
       title.innerHTML = videoArray[i].snippet.title;
       title.setAttribute('href', `https://www.youtube.com/watch?v=${videoArray[i].id.videoId}`);
-      const author = addNewElement('p', 'main__video-preview__video__author', video);
+      const metaInfo = addNewElement('ul', 'main__video-preview__video__title__meta-info', video);
+      const author = addNewElement('li', 'main__video-preview__video__meta-info_author', metaInfo);
       author.innerHTML = `Channel: ${videoArray[i].snippet.channelTitle}`;
-      const date = addNewElement('p', 'main__video-preview__video__publish-date', video);
+      const date = addNewElement('li', 'main__video-preview__video__meta-info_publish-date', metaInfo);
       date.innerHTML = `Published: ${Date.parse(videoArray[i].snippet.publishedAt)}`;
-      const views = addNewElement('p', 'main__video-preview__video__views', video);
+      const views = addNewElement('li', 'main__video-preview__video__meta-info_views', metaInfo);
       views.innerHTML = `Views: ${response.items[i].statistics.viewCount}`;
       const description = addNewElement('p', 'main__video-preview__video__description', video);
       description.innerHTML = videoArray[i].snippet.description;

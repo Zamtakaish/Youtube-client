@@ -9,7 +9,7 @@
     align-items: center;
     border: 0 solid #b4c9d8;
     border-radius: 5px;
-    background-color: #e8e5ec;
+    background-color: #cddde8;
 }
 
 
@@ -43,14 +43,26 @@
     width: 90%;
     padding: 5%;
     text-decoration: none;
-    color: #2198bd;
+    color: #292071;
     overflow: hidden;
     font-family: Arial, sans-serif;
+    font-weight: 600;
     text-align: center;
+    background: rgb(148, 176, 202);
 }
 .main__video-preview__video__title:hover{
-    background-color: #b4c9d8;
-    color: #f7f5f9;
+    background-color: #292071;
+    color: #b4c9d8;
+}
+.main__video-preview__video__title__meta-info{
+    height: 25%;
+    width: 80%;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+    background: #abc6da;
 }
 .main__video-preview__video__author{
     height: 5%;
@@ -68,10 +80,12 @@
     align-self: flex-start;
 }
 .main__video-preview__video__description{
-    height: 20%;
+    height: 15%;
     width: 90%;
-    margin-top: 5%;
-    text-align: justify;
+    margin-top: auto;
     overflow: hidden;
+    padding: 5%;
+    font-size: 1vw;
+    word-wrap: break-word;
 }
 

@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;;
     align-items: center;
-    background-color: #aa99ec;
+    background-color: #776da0;
     border: none;
     border-radius: 5px;
     transition: 80ms;
@@ -29,12 +29,12 @@
 }
 .header__search-field__button_submit_wrapper:hover{
     outline: none;
-    -webkit-transform: scale(1.1, 1.1);
-    transition: 80ms;
+    transition: none;
+    background-color: #5a47a5;
 }
 .header__search-field__button_submit_wrapper:active{
-    background-color: #8a79cc;
-    -webkit-transform: scale(1, 1);
+    background-color: #403277;
+    transition: none;
 }
 
 .header__search-field__button_submit{
